@@ -16,7 +16,7 @@ function Sec1() {
                         <p className='md:text-sm lg:text-base xl:text-lg font-fustat text-gray-100 max-w-sm lg:max-w-xl'>Get where you need to go with a smooth and reliable ride experience. Choose your pickup and destination, book in seconds, and enjoy safe, comfortable transportation with professional drivers and real-time updates — whether it’s a daily commute, airport transfer, or long-distance trip.</p>
 
                         <Link href="/contact" className="relative inline-flex items-center px-8 lg:px-10 xl:px-12 py-2 lg:py-3 overflow-hidden text-base md:text-lg text-white border-2 border-white rounded-full hover:text-primary group hover:bg-gray-50 cursor-pointer font-fustat font-semibold">
-                            <span className="absolute left-0 block w-full h-0 transition-all bg-black opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                            <span className="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
                             <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </span>
