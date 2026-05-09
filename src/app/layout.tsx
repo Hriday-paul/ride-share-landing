@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fustat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
+import NextJsTopLoader from "@/components/shared/NextjsTopLoader";
 
 const fustat = Fustat({
   variable: "--font-fustat",
@@ -26,7 +28,11 @@ export default function RootLayout({
     >
       <body className="">
         <Navbar />
-        {children}</body>
+        <NextJsTopLoader />
+        {children}
+        <Footer />
+      </body>
+
     </html>
   );
 }

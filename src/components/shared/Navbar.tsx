@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from "../../../public/logo.png"
+import SmDrawer from './SmDrawer'
 
-const routs = [
+export const routs = [
     {
         id: 1,
         label: "Home",
@@ -39,12 +40,19 @@ function Navbar() {
                         </li>
                     })}
                 </ul>
-                <button className="group relative inline-flex py-3 text-sm md:text-base items-center justify-center rounded-full bg-primary px-7 md:px-11 font-semibold text-white transition hover:scale-105 cursor-pointer font-fustat overflow-hidden">
-                    <span>Contact Us</span>
-                    <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                        <div className="relative h-full w-8 bg-white/20"></div>
+                
+                <div className='flex flex-row gap-x-3 items-center'>
+                    <Link href={"/contact"} className="group relative inline-flex py-3 text-sm md:text-base items-center justify-center rounded-full bg-primary px-7 md:px-11 font-semibold text-white transition hover:scale-105 cursor-pointer font-fustat overflow-hidden">
+                        <span>Contact Us</span>
+                        <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                            <div className="relative h-full w-8 bg-white/20"></div>
+                        </div>
+                    </Link>
+
+                    <div className='md:hidden'>
+                        <SmDrawer />
                     </div>
-                </button>
+                </div>
 
             </div>
         </div>
