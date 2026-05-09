@@ -3,8 +3,8 @@ import { UseGetPrivacy } from '@/lib/services/Content';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Fee-policy | AnyJob",
-    description: "Find skilled people, professionals and contractors effortlessly.",
+    title: "Privacy | Adbvantage Ride",
+    description: "Privacy policy Page",
 };
 
 const page = async () => {
@@ -18,7 +18,6 @@ const page = async () => {
         }
     };
 
-
     return (
         <div className='bg-white'>
             {/* <h2 className='font-poppins text-3xl text-black py-40 text-center'>This page content is dynamic</h2> */}
@@ -27,7 +26,7 @@ const page = async () => {
                     dangerouslySetInnerHTML={{
                         __html: privacy?.data?.value || "",
                     }}
-                    className="font-fustat"
+                    className="font-fustat [&_h1]:text-3xl [&_h2]:text-2xl"
                 ></div>
             </div>
         </div>

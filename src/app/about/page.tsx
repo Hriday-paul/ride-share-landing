@@ -3,8 +3,8 @@ import { UseGetAbout } from '@/lib/services/Content';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Fee-policy | AnyJob",
-    description: "Find skilled people, professionals and contractors effortlessly.",
+    title: "About | Adbvantage Ride",
+    description: "About us Page",
 };
 
 const page = async () => {
@@ -27,7 +27,7 @@ const page = async () => {
                     dangerouslySetInnerHTML={{
                         __html: privacy?.data?.value || "",
                     }}
-                    className="font-fustat"
+                    className="font-fustat [&_h1]:text-3xl [&_h2]:text-2xl"
                 ></div>
             </div>
         </div>
