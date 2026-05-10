@@ -26,7 +26,11 @@ const page = async () => {
                     dangerouslySetInnerHTML={{
                         __html: privacy?.data?.value || "",
                     }}
-                    className="font-fustat [&_h1]:text-3xl [&_h2]:text-2xl"
+                    className="font-fustat [&_h1]:text-3xl [&_h2]:text-2xl [&_ul]:list-disc
+    [&_ul]:pl-6
+
+    [&_ol]:list-decimal
+    [&_ol]:pl-6"
                 ></div>
             </div>
         </div>
