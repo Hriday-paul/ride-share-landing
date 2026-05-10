@@ -47,7 +47,7 @@ function ContactForm() {
             </div>}
 
             {/* ------------------for error---------------- */}
-            {error && <div className='bg-red-500/20 rounded text-white font-poppins px-4 py-2 text-xs border border-red-800'>
+            {error && <div className='bg-red-500/10 rounded text-red-500/80 font-poppins px-4 py-2 text-xs border border-red-500'>
                 <p className=''>{error}</p>
             </div>}
 
@@ -88,7 +88,7 @@ function ContactForm() {
                 <textarea name="message" rows={5} required id="message" className="block px-3 py-2 w-full text-base text-zinc-900 rounded-[6px] focus:outline-none peer font-fustat border border-strokeinput" placeholder=" " />
             </div>
 
-            <button disabled={isLoading} type='submit' className='bg-primary text-white p-2.5 uppercase text-base font-poppins font-medium rounded-xl w-full flex flex-row gap-x-2 items-center justify-center disabled:cursor-not-allowed disabled:bg-primary/70 hover:bg-primary/80 duration-200'>
+            <button disabled={isLoading} type='submit' className='bg-primary text-white p-2.5 uppercase text-base font-poppins font-medium rounded-xl w-full flex flex-row gap-x-2 items-center justify-center disabled:cursor-not-allowed disabled:bg-primary/70 hover:bg-primary/80 duration-200 cursor-pointer'>
                 {isLoading && <ImSpinner2 className='size-4 text-white animate-spin' />}
                 <p>Submit Now</p>
             </button>

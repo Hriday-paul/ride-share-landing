@@ -5,7 +5,7 @@ import { IoCallOutline, IoMailOutline } from 'react-icons/io5'
 function ContactPage() {
     return (
         <div className='container'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 '>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mt-5 lg:mt-8 '>
                 <div className='bg-primary/10 p-10 rounded-xl space-y-5'>
                     <h3 className='text-black text-4xl font-fustat font-extrabold max-w-lg'>Hi there! We're always here to <span className='text-primary'>Help You</span></h3>
                     <p className='text-base text-gray-700 font-fustat font-medium'>Warm and approachable message to build trust and show constant support.</p>

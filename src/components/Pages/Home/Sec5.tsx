@@ -41,7 +41,7 @@ function Sec5() {
                     </div>
 
                     <div>
-                        <Image src={mockup} alt='mockup img' placeholder='blur' className='h-full w-auto mx-auto' />
+                        <Image src={mockup} alt='mockup img' placeholder='blur' className='w-full h-auto p-8 mx-auto' />
                     </div>
 
 

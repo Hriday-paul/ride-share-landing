@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { FiUsers } from "react-icons/fi";
 import { GoClock } from "react-icons/go";
@@ -10,6 +11,8 @@ import img3 from "../../../../public/sec4/img3.jpg"
 import img4 from "../../../../public/sec4/img4.jpg"
 import img5 from "../../../../public/sec4/img5.jpg"
 import img6 from "../../../../public/sec4/img6.jpg"
+
+import { motion } from "motion/react"
 
 const services = [
     {
@@ -54,18 +57,39 @@ function Sec4() {
     return (
         <section className="py-16 px-4 sm:px-6 lg:px-8 font-fustat">
             <div className="container">
-                <div className="text-center max-w-xl mx-auto mb-12">
+                <motion.div
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                            duration: 0.28,
+                            delay: 0.1
+                        }
+                    }}
+                    viewport={{ once: true }}
+                    className="text-center max-w-xl mx-auto mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b2545]">
                         Book a Ride and Enjoy the Journey
                     </h2>
                     <p className="mt-4 text-sm sm:text-base text-slate-500">
                         Explore reliable travel options for every journey—from airport transfers and rentals to ride sharing, scheduled trips, and corporate rides—designed for your comfort and convenience.
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {services.map(({ title, description, image, icon: Icon }) => (
-                        <article key={title} className="relative group">
+                    {services.map(({ title, description, image, icon: Icon }, indx) => (
+                        <motion.article
+                            initial={{ opacity: 0 }}
+                            whileInView={{
+                                opacity: 1,
+                                transition: {
+                                    duration: 0.28,
+                                    delay: 0.1 * (indx + 1)
+                                }
+                            }}
+                            viewport={{ once: true }}
+                            key={title} className="relative group">
                             <div className="relative rounded-3xl overflow-hidden">
                                 <Image
                                     src={image}
@@ -84,7 +108,7 @@ function Sec4() {
                             <div className="absolute top-4 right-6 w-14 h-14 rounded-full bg-[#f5a623] flex items-center justify-center shadow-md ring-4 ring-[#eaf1fa] text-xl">
                                 {Icon}
                             </div>
-                        </article>
+                        </motion.article>
                     ))}
                 </div>
             </div>
